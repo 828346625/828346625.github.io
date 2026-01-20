@@ -331,13 +331,30 @@
         }
         @media (max-width: 480px) {
         .todo-container {
-        padding: 20px 15px;
-        margin: 10px;
-        border-radius: 15px;
+            padding: 20px 15px;
+            margin: 10px;
+            border-radius: 15px;
+        }
     }
     
-    .header h1 {
-        font-size: 1.
+    /* 禁止手机上的文本缩放 */
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+    
+    /* 优化按钮点击效果 */
+    button, 
+    .todo-item,
+    .checkbox-container {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* 优化输入框在 iOS 上的显示 */
+    input {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
     </style>
 </head>
 
@@ -530,3 +547,4 @@
 
 
 </html>
+
